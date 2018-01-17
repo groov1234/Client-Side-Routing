@@ -10,7 +10,7 @@ export default class MovieCard extends React.Component {
 
   componentDidMount() {
     // change this line to grab the id passed on the URL
-    const id = 1;
+    const id = this.props.match.params.id;
     axios
       .get(`http://localhost:5000/api/movies/${id}`)
       .then(response => this.setState(() => ({ movie: response.data })))
@@ -28,10 +28,10 @@ export default class MovieCard extends React.Component {
     return (
       <div>
       
-        <Link to="/">Home</Link>
+        <div className="home"><Link to="/">Back to List</Link></div>
   
       <div className="movie-card">      
-
+        
         <h2>{title}</h2>
         <div className="movie-director">
           Director: <em>{director}</em>
@@ -46,6 +46,7 @@ export default class MovieCard extends React.Component {
             {star}
           </div>
         ))}
+        <Link to="movies/rental">Rent Me!</Link>
       </div>
       </div>
     );

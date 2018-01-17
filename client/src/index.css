@@ -2,7 +2,13 @@ body {
   margin: auto;
   padding: 20px;
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color: rgba(0, 0, 0, .915);
+  max-width: 500px; 
+  background-image: url("Gandalf.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
 }
 
 .movie-card {
@@ -12,6 +18,14 @@ body {
   padding: 1rem;
   margin: 20px;
   cursor: pointer;
+  max-width: 500px;
+  font-size: 10px;
+}
+
+.movie-card > a {
+  font-size: 15px;
+  margin-left: 100px;
+  color: red;
 }
 
 .movie-director {
@@ -25,3 +39,21 @@ a {
   font-weight: Bold;
   font-size: 30px;
 }
+
+a:hover {
+  color: blue;
+}
+
+.home {
+  max-width: 500px;
+}
+
+.home > a {
+  color: white;
+  font-size: 20px;
+}
+
+.home > a:hover {
+  color: red;
+}
+
